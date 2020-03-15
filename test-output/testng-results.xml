@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="WeatherSuite" duration-ms="1866" started-at="2020-03-15T06:55:41Z" finished-at="2020-03-15T06:55:43Z">
+    <groups>
+    </groups>
+    <test name="Weather Forecasr" duration-ms="1866" started-at="2020-03-15T06:55:41Z" finished-at="2020-03-15T06:55:43Z">
+      <class name="com.test.Weather">
+        <test-method status="PASS" signature="getWeatherMap()[pri:0, instance:com.test.Weather@5d5eef3d]" name="getWeatherMap" is-config="true" duration-ms="6736" started-at="2020-03-15T12:25:34Z" finished-at="2020-03-15T12:25:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getWeatherMap -->
+        <test-method status="PASS" signature="verifyDays()[pri:0, instance:com.test.Weather@5d5eef3d]" name="verifyDays" duration-ms="1127" started-at="2020-03-15T12:25:41Z" finished-at="2020-03-15T12:25:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDays -->
+        <test-method status="PASS" signature="verifyHourlyForecast()[pri:0, instance:com.test.Weather@5d5eef3d]" name="verifyHourlyForecast" duration-ms="199" started-at="2020-03-15T12:25:42Z" depends-on-methods="com.test.Weather.verifyDays" finished-at="2020-03-15T12:25:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHourlyForecast -->
+        <test-method status="PASS" signature="verifyTemp()[pri:0, instance:com.test.Weather@5d5eef3d]" name="verifyTemp" duration-ms="199" started-at="2020-03-15T12:25:42Z" depends-on-methods="com.test.Weather.verifyHourlyForecast" finished-at="2020-03-15T12:25:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTemp -->
+        <test-method status="PASS" signature="verifyLightRain()[pri:0, instance:com.test.Weather@5d5eef3d]" name="verifyLightRain" duration-ms="174" started-at="2020-03-15T12:25:42Z" depends-on-methods="com.test.Weather.verifyTemp" finished-at="2020-03-15T12:25:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLightRain -->
+        <test-method status="PASS" signature="verifyClearSky()[pri:0, instance:com.test.Weather@5d5eef3d]" name="verifyClearSky" duration-ms="129" started-at="2020-03-15T12:25:43Z" depends-on-methods="com.test.Weather.verifyLightRain" finished-at="2020-03-15T12:25:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyClearSky -->
+      </class> <!-- com.test.Weather -->
+    </test> <!-- Weather Forecasr -->
+  </suite> <!-- WeatherSuite -->
+</testng-results>
