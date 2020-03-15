@@ -80,9 +80,9 @@ public class CommonUtil {
 	 * 
 	 */
 	public boolean daysTest(Integer expectedDays) throws ParseException {
-		List<Map<String, Object>> list = JsonPath.with(response.body().asString()).getList("list");
-		String startDate = (String) list.get(0).get("dt_txt");
-		String endDate = (String) list.get(list.size() - 1).get("dt_txt");
+		JsonPath body = JsonPath.with(response.body().asString());
+		String startDate = body.getString("list[0].dt_txt");
+		String endDate =  body.getString("list[-1].dt_txt");
 		int actualDays = DateUtil.getDaysBetweenTwoDates(startDate, endDate, "yyyy-MM-dd HH:mm:ss");
 		logger.info("Actual Days: " + actualDays);
 		return expectedDays == actualDays;
