@@ -41,7 +41,7 @@ public class CommonUtil {
 	 * 
 	 */
 	public boolean tempTest() {
-		String temp = "list.findAll {it.main.temp < it.main.temp_min || it.temp > it.main.temp_min}.size()";
+		String temp = "list.findAll {it.main.temp < it.main.temp_min || it.temp > it.main.temp_max}.size()";
 		// This condition is used to fetch incorrect records
 		int count = JsonPath.with(response.body().asString()).get(temp);
 		return count == 0; // count should be zero if all the records are
